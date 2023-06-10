@@ -3,7 +3,7 @@ export default function Footer() {
     <>
       <br />
 
-      <div className="flex items-center justify-center text-right text-3xl font-semibold">
+      <div className="flex items-center justify-center text-right text-3xl font-semibold ">
         <p className="dark:text-white">
           Let's work together on <br /> your next product.
         </p>
@@ -13,7 +13,7 @@ export default function Footer() {
             Github
           </a>
           <br />
-          <a className="dark:text-white" href="">
+          <a className="dark:text-white" href="https://batuhan-tas.netlify.app">
             Personal Blog
           </a>
           <br />

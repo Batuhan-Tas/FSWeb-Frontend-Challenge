@@ -13,16 +13,32 @@ import "./App.css";
 
 function App() {
   const [theme, setTheme] = useState("light");
+  const userTheme = localStorage.getItem("theme");
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const themeCheck = () => {
+    if (userTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  };
 
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+
+      return;
     }
   }, [theme]);
 
-  const teamSwitchHandler = () => {
+  useEffect(() => {
+    themeCheck();
+  }, []);
+
+  const themeSwitchHandler = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
@@ -32,7 +48,7 @@ function App() {
         <div className="text-gray-400 bg-slate-200 body-font h-1/5 grid justify-items-end dark:bg-gray-800">
           <Navbar />
           <button
-            onClick={teamSwitchHandler}
+            onClick={themeSwitchHandler}
             className="bg-green-200 p-4 rounded-3xl "
           >
             Dark Mode
@@ -52,12 +68,12 @@ function App() {
           <Profile />
         </div>
 
-        <div>
-          <Projects className="text-gray-400 bg-white-800 body-font h-1/5 dark:bg-gray-400" />
+        <div className="text-gray-400 bg-white-800 body-font h-1/5 dark:bg-gray-400">
+          <Projects />
         </div>
 
-        <div>
-          <Footer className="dark:bg-gray-800" />
+        <div className="dark:bg-gray-800">
+          <Footer />
         </div>
       </div>
     </>

@@ -36,14 +36,16 @@ export default function Profile() {
           </div>
         </div>
         <div className="dark:text-white">
-          About me <br />I am a individual with exceptional problem solving
-          skills thanks to <br />
-          my engineering background and I am very prone to teamwork ! <br />{" "}
-          <br />I like working in a fun and fast-paced environment. <br />I
-          believe a developer should be continuously learning and I am <br />
-          trying my best to keep up with latest developments in the industry.
-          <br /> <br />I am currently studying under Workintech to become a
-          Full-Stack Developer
+          <p>
+            About me <br />I am a individual with exceptional problem solving
+            skills thanks to <br />
+            my engineering background and I am very prone to teamwork ! <br />{" "}
+            <br />I like working in a fun and fast-paced environment. <br />I
+            believe a developer should be continuously learning and I am <br />
+            trying my best to keep up with latest developments in the industry.
+            <br /> <br />I am currently studying under Workintech to become a
+            Full-Stack Developer
+          </p>
         </div>
       </div>
       <br />
