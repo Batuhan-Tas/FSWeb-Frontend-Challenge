@@ -4,7 +4,7 @@ export default function Footer() {
       <br />
 
       <div className="flex items-center justify-center text-right text-3xl font-semibold">
-        <p>
+        <p className="dark:text-white">
           Let's work together on <br /> your next product.
         </p>
 
@@ -13,7 +13,9 @@ export default function Footer() {
             Github
           </a>
           <br />
-          <a href="">Personal Blog</a>
+          <a className="dark:text-white" href="">
+            Personal Blog
+          </a>
           <br />
           <a
             className="text-cyan-800"

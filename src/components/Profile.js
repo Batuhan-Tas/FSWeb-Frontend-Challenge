@@ -6,13 +6,13 @@ export default function Profile() {
       <div>
         <br />
         <div className="flex items-center justify-center text-3xl ">
-          Profile
+          <h2 className="dark:text-white">Profile</h2>
         </div>
         <br />
       </div>
       <div className="flex space-x-10 items-center justify-center h-60">
         <div className="flex">
-          <div className="border-4 rounded-xl bg-white drop-shadow-xl shadow-xl   ">
+          <div className="border-4 rounded-xl bg-white drop-shadow-xl shadow-xl dark:text-white dark:bg-gray-400   ">
             <p className="text-pink-500 pl-6 font-semibold">
               Basic Information
             </p>
@@ -35,7 +35,7 @@ export default function Profile() {
             </p>
           </div>
         </div>
-        <div>
+        <div className="dark:text-white">
           About me <br />I am a individual with exceptional problem solving
           skills thanks to <br />
           my engineering background and I am very prone to teamwork ! <br />{" "}

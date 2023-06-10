@@ -7,10 +7,10 @@ export default function About() {
     <section id="about">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-black dark:text-white">
             Hi 👋 <br />
-            I'm Batuhan. I'm a full stack developer. I can craft solid and
-            scalable frontend products.
+            I'm Batuhan. I'm a full stack <br />
+            developer. I can craft solid and <br /> scalable frontend products.
             <br />
             Let's meet!
           </h1>
@@ -32,15 +32,23 @@ export default function About() {
           </div>
           <br />
           <p className="mb-8 leading-relaxed">
-            Currently Freelancing for UX,UI, & Web Design Projects.
+            Currently <span className="text-pink-600">Freelancing</span> for{" "}
+            <span className="text-pink-600">UX,UI, & Web Design </span>
+            Projects.
             <br />
-            Invite me to join your team &#8594; batuhan.tas@yahoo.com
+            Invite me to join your team &#8594;{" "}
+            <span
+              className="text-pink-600"
+              onClick={() => (window.location = "mailto:batuhan.tas@yahoo.com")}
+            >
+              batuhan.tas@yahoo.com
+            </span>
           </p>
         </div>
 
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex items-center justify-center">
           <img
-            className="object-cover object-center rounded drop-shadow-xl shadow-xl"
+            className="object-cover object-center rounded drop-shadow-xl shadow-xl  shadow-pink-300"
             alt="me"
             src="photo.jpg"
             width={280}
